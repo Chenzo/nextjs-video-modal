@@ -1,0 +1,21 @@
+
+.modal {
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    
+}
