@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import { useState, useEffect } from 'react';
 import TollModal from '../components/toll-modal';
+import Vimeo from '../components/vimeo-comp';
 
 export default function Home() {
 
@@ -31,13 +32,11 @@ export default function Home() {
           <img src="/bill.jpg" />
       </main>
 
+
       {modalOpen &&
         <TollModal closeAction={closeModal}>
           <div>
-          This is my modal content
-          <ul>
-            <li>thisdsdsdsd</li>
-          </ul>
+            <Vimeo videoID="35055590"></Vimeo>
           </div>
         </TollModal>
       }

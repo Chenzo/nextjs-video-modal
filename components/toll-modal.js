@@ -11,7 +11,7 @@ export default function TollModal( {children, closeAction} ) {
 
     return (
         <div className={styles.modal}>
-            <div onClick={closeAction}>CLOSE ME</div>
+            <div className={styles.closer} onClick={closeAction}>CLOSE ME</div>
             {children}
         </div>
 
