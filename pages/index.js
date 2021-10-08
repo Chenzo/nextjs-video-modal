@@ -1,18 +1,46 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
+import { useState, useEffect } from 'react';
+import TollModal from '../components/toll-modal';
 
 export default function Home() {
+
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const myThing = function(evt) {
+    console.log("my Thing Fired");
+    setModalOpen(true);
+  }
+
+  const closeModal = function(evt) {
+    setModalOpen(false);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create NextJS Modal And Video</title>
+        <title>NextJS Modal And Video</title>
         <meta name="description" content="Simple NextJS Modal and Video example" />
       </Head>
 
       <main className={styles.main}>
-          paragraph and image here.
+          <p>
+          Lorem ipsum dolor sit amet, <span onClick={myThing}>consectetur adipiscing elit</span>. Aenean tristique justo in velit malesuada, sed porta dui rutrum. Nulla facilisi. Aenean mauris augue, ultricies eu lacus quis, vulputate iaculis magna. Nunc venenatis euismod laoreet. Ut quis sapien blandit, semper purus id, varius sapien. Donec a porta arcu. Morbi id lacus mollis, dictum nisl in, lacinia lacus. Nullam aliquam venenatis tristique. Phasellus lacinia arcu at libero congue pretium. Praesent pretium risus dictum metus congue molestie. Integer cursus velit nisi, sit amet hendrerit tellus blandit euismod. Nunc cursus tellus id rhoncus semper.
+          </p>
+          <img src="/bill.jpg" />
       </main>
+
+      {modalOpen &&
+        <TollModal closeAction={closeModal}>
+          <div>
+          This is my modal content
+          <ul>
+            <li>thisdsdsdsd</li>
+          </ul>
+          </div>
+        </TollModal>
+      }
 
     </div>
   )

@@ -7,3 +7,22 @@
   align-items: center;
   height: 100vh;
 }
+
+
+.main {
+  width: 1000px;
+  p {
+    width: 45%;
+    display: inline-block;
+    vertical-align: middle;
+    span {
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  img {
+    width: 35%;
+    vertical-align: middle;
+  }
+}
