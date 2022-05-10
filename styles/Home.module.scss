@@ -10,7 +10,7 @@
 
 
 .main {
-  width: 1000px;
+  width: 800px;
   p {
     width: 45%;
     display: inline-block;
@@ -19,6 +19,7 @@
       font-weight: bold;
       text-decoration: underline;
       cursor: pointer;
+      color: blue;
     }
   }
   img {
